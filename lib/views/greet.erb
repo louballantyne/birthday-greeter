@@ -1,0 +1,11 @@
+<h2>Your birthday is on <%=@month%> <%=@day%>, <%=@name%></h2>
+
+=begin
+<%if !@funny_name%>
+<form action="/named-parrot">
+  <input type="text" name="name">
+  <input type="submit" name="submit">
+
+</form>
+<%end%>
+=end
