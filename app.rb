@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/base'
 
-#class Greeter < Sinatra::Base
+class Greeter < Sinatra::Base
 
 enable :sessions
 
@@ -23,4 +23,6 @@ enable :sessions
     @day = session[:day]
     erb :greet
   end
-#end
+  run! if app_file == $0
+
+end
