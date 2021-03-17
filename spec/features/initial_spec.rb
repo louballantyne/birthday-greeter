@@ -2,6 +2,12 @@ require './app'
 
 describe Greeter do
   describe "The Homepage", type: :feature do
+    it "Asks the user for their name and date of birth" do
+      visit '/'
+      expect(page).to have_text 'name?'
+      expect(page).to have_text 'Month:'
+      expect(page).to have_text 'Day:'
+    end
     before do
       visit '/'
       fill_in 'name', with: 'Bart'
